@@ -8,8 +8,8 @@ const companies = ref([
 ])
 </script>
 <template>
-    <section class="gd yd md:ng">
-        <div class="l bb td sm:ud">
+    <section class="bg-white py-16 md:py-28">
+        <div class="px-5 max-w-7xl mx-auto td sm:px-7">
             <div class="y qb ub xb lg:jg">
                 <div>
                     <h1 class="eb ie pe sm:dg sm:qe sm:eg">
