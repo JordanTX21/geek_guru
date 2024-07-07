@@ -1,7 +1,29 @@
 <script setup>
 import { ref } from 'vue'
 
-const plans = ref([])
+const plans = ref([
+    {
+        name: "Basic Plan",
+        recommended: false,
+        description: "Perfect for freelancers and solo entrepreneurs who need basic project management tools to keep their work on track.",
+        features: ['Smart automation tools','Real-time analytics dashboard','Basic collaboration features','Email support'],
+        price: "9"
+    },
+    {
+        name: "Standard Plan",
+        recommended: true,
+        description: "Perfect for freelancers and solo entrepreneurs who need basic project management tools to keep their work on track.",
+        features: ['Smart automation tools','Real-time analytics dashboard','Basic collaboration features','Email support'],
+        price: "29"
+    },
+    {
+        name: "Premium Plan",
+        recommended: false,
+        description: "Perfect for freelancers and solo entrepreneurs who need basic project management tools to keep their work on track.",
+        features: ['Smart automation tools','Real-time analytics dashboard','Basic collaboration features','Email support'],
+        price: "89"
+    },
+])
 </script>
 <template>
     <section class="de md:og" id="pricing">

@@ -24,7 +24,7 @@ const features = ref([
 ])
 </script>
 <template>
-    <section class="de md:og" id="features">
+    <section class="pt-[4rem] md:pt-[7rem]" id="features">
         <div class="l bb td sm:ud">
             <div class="gc sm:ge">
                 <span class="x sc uc yc bd qd.5 vd.5 ne pe se df">
@@ -40,12 +40,12 @@ const features = ref([
                     <div class="w rb wb pc uc _c gd pd df md:ia">
                         <div class="hc">
                             <div class="w ba pa ub vb tc bd df ff hf">
-                                <feature.icon class="ga va se">
+                                <div class="ga va se">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ga va se">
                                         <path fill="currentColor" :d="feature.icon"></path>
                                     </svg>
-                                </feature.icon>
+                                </div>
                             </div>
                             <h3 class="rg:text-2xl me oe" v-text="feature.name"></h3>
                         </div>

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import {RouterLink} from 'vue-router';
 
 
 const isOpen = ref(false)
@@ -18,10 +19,6 @@ const menu = ref([
         href: '#pricing'
     },
     {
-        name: 'FAQ',
-        href: '#faq'
-    },
-    {
         name: 'Contact',
         href: '#contact-us'
     },
@@ -32,15 +29,15 @@ const menu = ref([
         <div class="px-5 sm:px-7 max-w-7xl mx-auto">
             <div class="flex justify-between items-center relative">
                 <div class="flex items-center">
-                    <a href="/amiso/">
+                    <RouterLink to="/">
                         <img src="https://preview.launchoice.com/amiso/images/logo.svg" alt="Amiso"
                             class="width-[110px]">
-                    </a>
+                    </RouterLink>
                     <nav class="max-lg:hidden flex gap-x-7 ml-14">
                         <div v-for="item in menu" :key="item.name">
-                            <a :href="item.href"
+                            <RouterLink :to="{path: '/',hash: item.href}"
                                 class="font-medium text-zinc-600 inline-block hover:text-zinc-950 text-sm"
-                                v-text="item.name"></a>
+                                v-text="item.name"></RouterLink>
                         </div>
                     </nav>
                 </div>
@@ -65,11 +62,11 @@ const menu = ref([
                             <div v-show="isOpen"
                                 class="bg-white ring-zinc-950/[.05] p-7 rounded-2xl shadow-xl flex flex-col origin-top mt-5 absolute top-full left-0 right-0">
                                 <div v-for="item in menu" :key="`mobile-${item.name}`">
-                                    <a @click="isOpen = false" :href="item.href" class="py-1.5 block w-full"
-                                        v-text="item.name"></a>
+                                    <RouterLink @click="isOpen = false" :to="{path: '/',hash: item.href}" class="py-1.5 block w-full"
+                                        v-text="item.name"></RouterLink>
                                 </div>
                                 <hr class="m _c">
-                                <a href="/amiso/signin.html" class="py-1.5 block w-full">Sign in</a>
+                                <RouterLink to="/contact" class="py-1.5 block w-full">Contactanos</RouterLink>
                             </div>
                         </div>
                     </div>
